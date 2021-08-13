@@ -6,9 +6,17 @@ import { routes } from './routes';
 const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
-        height: 45,
+        height: 50,
         alignItems: 'center',
-        marginLeft: 15,
+        backgroundColor: 'white',
+        justifyContent:'space-between',
+        paddingHorizontal: 15,
+        borderBottomColor: '#f5f5f5',
+    },
+
+    text: {
+        fontSize: 15,
+        color: '#333333',
     },
 });
 
@@ -21,7 +29,8 @@ export const HomeScreen = () => {
             return (
                 <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate(item.key)}>
                     <View style={styles.row}>
-                        <Text>{item.title}</Text>
+                        <Text style={styles.text}>{item.title}</Text>
+                        <Text>{'>'}</Text>
                     </View>
                 </TouchableOpacity>
             );
