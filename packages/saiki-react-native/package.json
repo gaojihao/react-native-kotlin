@@ -1,0 +1,29 @@
+{
+  "name": "saiki-react-native",
+  "version": "0.0.1",
+  "description": "React Native UI Components",
+  "keywords": [
+    "react-native"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaojihao/saiki-react-native.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/gaojihao/saiki-react-native/tree/master/packages/saiki-react-native#readme",
+  "dependencies": {
+    "@saiki-react-native/button": "^0.0.1",
+    "@saiki-react-native/theme": "^0.0.1"
+  }
+}

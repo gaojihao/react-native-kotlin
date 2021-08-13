@@ -1,0 +1,25 @@
+{
+  "name": "@saiki-react-native/theme",
+  "version": "0.0.1",
+  "description": "theme library for saiki-react-native",
+  "keywords": [
+    "scripts"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "theming": "^3.3.0"
+  }
+}

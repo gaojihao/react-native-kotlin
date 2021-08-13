@@ -1,0 +1,73 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:dumi": "dumi dev",
+    "build:dumi": "lerna run build && dumi build",
+    "build": "lerna run build",
+    "commit": "git cz",
+    "postinstall": "patch-package",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "versionup": "lerna version",
+    "versionup:patch": "yarn versionup patch",
+    "versionup:minor": "yarn versionup minor",
+    "versionup:major": "yarn versionup major",
+    "versionup:prepatch": "yarn versionup prepatch",
+    "versionup:preminor": "yarn versionup preminor",
+    "versionup:premajor": "yarn versionup premajor",
+    "versionup:prerelease": "yarn versionup --conventional-prerelease",
+    "bundle:ios": "mkdirp bundle/ios && react-native bundle --platform ios --entry-file index.js --bundle-output ./bundle/ios/index.ios.jsbundle --assets-dest ./bundle/ios --dev false --reset-cache",
+    "bundle:android": "mkdirp bundle/android && react-native bundle --platform android --entry-file index.js --bundle-output bundle/android/index.android.bundle --assets-dest ./bundle/android --dev false --reset-cache"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.64.2",
+    "react-native-svg": "^12.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "^12.1.4",
+    "@types/enzyme": "^3.10.9",
+    "@types/react-native": "^0.64.10",
+    "@types/react-test-renderer": "^16.9.2",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "core-js": "^3.15.2",
+    "cz-customizable": "^6.3.0",
+    "dumi": "^1.1.23",
+    "dumi-theme-mobile": "^1.1.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.11.0",
+    "lerna": "^3.22.1",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "mkdirp": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "patch-package": "^6.4.7",
+    "pod-install": "^0.1.24",
+    "react-test-renderer": "17.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3",
+    "umi-plugin-react-native": "^0.5.0"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  }
+}
