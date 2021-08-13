@@ -21,9 +21,7 @@
     "versionup:prepatch": "yarn versionup prepatch",
     "versionup:preminor": "yarn versionup preminor",
     "versionup:premajor": "yarn versionup premajor",
-    "versionup:prerelease": "yarn versionup --conventional-prerelease",
-    "bundle:ios": "mkdirp bundle/ios && react-native bundle --platform ios --entry-file index.js --bundle-output ./bundle/ios/index.ios.jsbundle --assets-dest ./bundle/ios --dev false --reset-cache",
-    "bundle:android": "mkdirp bundle/android && react-native bundle --platform android --entry-file index.js --bundle-output bundle/android/index.android.bundle --assets-dest ./bundle/android --dev false --reset-cache"
+    "versionup:prerelease": "yarn versionup --conventional-prerelease"
   },
   "dependencies": {
     "react": "17.0.2",
