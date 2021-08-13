@@ -1920,6 +1920,46 @@
   resolved "https://registry.npm.taobao.org/@react-native/polyfills/download/@react-native/polyfills-1.0.0.tgz#05bb0031533598f9458cf65a502b8df0eecae780"
   integrity sha1-BbsAMVM1mPlFjPZaUCuN8O7K54A=
 
+"@react-navigation/core@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.nlark.com/@react-navigation/core/download/@react-navigation/core-6.0.1.tgz?cache=0&sync_timestamp=1627983824261&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40react-navigation%2Fcore%2Fdownload%2F%40react-navigation%2Fcore-6.0.1.tgz#4424ee1f83e2e305ef80d27c2778fb82fba852a0"
+  integrity sha1-RCTuH4Pi4wXvgNJ8J3j7gvuoUqA=
+  dependencies:
+    "@react-navigation/routers" "^6.0.1"
+    escape-string-regexp "^4.0.0"
+    nanoid "^3.1.23"
+    query-string "^7.0.0"
+    react-is "^16.13.0"
+
+"@react-navigation/elements@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.nlark.com/@react-navigation/elements/download/@react-navigation/elements-1.0.4.tgz#7694473716ebb8b5d69523bc75924d81955e19a8"
+  integrity sha1-dpRHNxbruLXWlSO8dZJNgZVeGag=
+
+"@react-navigation/native-stack@^6.0.5":
+  version "6.0.5"
+  resolved "https://registry.nlark.com/@react-navigation/native-stack/download/@react-navigation/native-stack-6.0.5.tgz#38d8b827b2215d18a2180764a00a139eccee75ab"
+  integrity sha1-ONi4J7IhXRiiGAdkoAoTnszudas=
+  dependencies:
+    "@react-navigation/elements" "^1.0.4"
+    warn-once "^0.1.0"
+
+"@react-navigation/native@^6.0.2":
+  version "6.0.2"
+  resolved "https://registry.nlark.com/@react-navigation/native/download/@react-navigation/native-6.0.2.tgz#6bdb3cfafb6a9cfb603c1555dd61faafca35b7c2"
+  integrity sha1-a9s8+vtqnPtgPBVV3WH6r8o1t8I=
+  dependencies:
+    "@react-navigation/core" "^6.0.1"
+    escape-string-regexp "^4.0.0"
+    nanoid "^3.1.23"
+
+"@react-navigation/routers@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.nlark.com/@react-navigation/routers/download/@react-navigation/routers-6.0.1.tgz?cache=0&sync_timestamp=1627983820779&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40react-navigation%2Frouters%2Fdownload%2F%40react-navigation%2Frouters-6.0.1.tgz#ae50f07c776c18bd9fdc87f17e9f3afc3fd59d19"
+  integrity sha1-rlDwfHdsGL2f3Ifxfp86/D/VnRk=
+  dependencies:
+    nanoid "^3.1.23"
+
 "@sideway/address@^4.1.0":
   version "4.1.2"
   resolved "https://registry.nlark.com/@sideway/address/download/@sideway/address-4.1.2.tgz?cache=0&sync_timestamp=1620368155014&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40sideway%2Faddress%2Fdownload%2F%40sideway%2Faddress-4.1.2.tgz#811b84333a335739d3969cfc434736268170cad1"
@@ -8352,6 +8392,11 @@ mz@^2.5.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
+nanoid@^3.1.23:
+  version "3.1.25"
+  resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.25.tgz?cache=0&sync_timestamp=1628771923493&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fnanoid%2Fdownload%2Fnanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
+  integrity sha1-CcoydHwOVD8OGBS303k0d/nI4VI=
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.nlark.com/nanomatch/download/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -9898,6 +9943,16 @@ query-string@^6.11.0, query-string@^6.13.8:
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
 
+query-string@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.nlark.com/query-string/download/query-string-7.0.1.tgz#45bd149cf586aaa582dffc7ec7a8ad97dd02f75d"
+  integrity sha1-Rb0UnPWGqqWC3/x+x6itl90C910=
+  dependencies:
+    decode-uri-component "^0.2.0"
+    filter-obj "^1.1.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.npm.taobao.org/querystring-es3/download/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -10143,7 +10198,7 @@ react-google-maps@^9.4.5:
     scriptjs "^2.5.8"
     warning "^3.0.0"
 
-react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.6:
+react-is@^16.12.0, react-is@^16.13.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.6:
   version "16.13.1"
   resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
@@ -10176,6 +10231,18 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-safe-area-context@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.nlark.com/react-native-safe-area-context/download/react-native-safe-area-context-3.3.0.tgz#6e0b45baa031589ec9c54f8359ace166a36aa5e5"
+  integrity sha1-bgtFuqAxWJ7JxU+DWazhZqNqpeU=
+
+react-native-screens@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.nlark.com/react-native-screens/download/react-native-screens-3.5.0.tgz#c40be78dff8e2dff1b00ba8fa670b2e429e632d2"
+  integrity sha1-xAvnjf+OLf8bALqPpnCy5CnmMtI=
+  dependencies:
+    warn-once "^0.1.0"
 
 react-native-svg-web@^1.0.9:
   version "1.0.9"
@@ -12500,6 +12567,11 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warn-once@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.nlark.com/warn-once/download/warn-once-0.1.0.tgz#4f58d89b84f968d0389176aa99e0cf0f14ffd4c8"
+  integrity sha1-T1jYm4T5aNA4kXaqmeDPDxT/1Mg=
 
 warning@^3.0.0:
   version "3.0.0"
