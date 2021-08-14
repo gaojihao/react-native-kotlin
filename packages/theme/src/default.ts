@@ -1,53 +1,37 @@
 import { StyleSheet } from 'react-native';
-// Color Palette
-// 色彩, NOTE: must use `#000000` instead of `#000`
-// https://facebook.github.io/react-native/docs/colors.html
-// 8-digit-hex to 4-digit hex https://css-tricks.com/8-digit-hex-codes/
-// https://www.chromestatus.com/feature/5685348285808640 chrome will support `#RGBA`s
-
-/**
- * Base Colors
- */
+// 基础颜色
 const colors = {
   black: '#000000',
   white: '#ffffff',
-  'gray-1': '#f7f8fa',
-  'gray-2': '#f2f3f5',
-  'gray-3': '#ebedf0',
-  'gray-4': '#dcdee0',
-  'gray-5': '#c8c9cc',
-  'gray-6': '#969799',
-  'gray-7': '#646566',
-  'gray-8': '#323233',
-  red: '#ee0a24',
-  blue: '#1989fa',
-  orange: '#ff976a',
-  'orange-dark': '#ed6a0c',
-  'orange-light': '#fffbe8',
-  green: '#07c160',
+  blue: '#00a0e9',
+  red: '#ff666666',
+  orange: '#f06e00',
+  dark: '#333333',
+  normal: '#666666',
+  gray: '#999999',
+  ccc: '#cccccc',
+  eee: '#eeeeee',
+  light: '#EFEFF4',
 };
 
-/**
- * TODO: Gradient Colors
- */
 const gradientColors = {
   'gradient-red': '',
   'gradient-orange': '',
 };
 
 /**
- * Component Colors
+ * 组件颜色
  */
 const componentColors = {
   'primary-color': colors.blue,
-  'success-color': colors.green,
+  'success-color': colors.blue,
   'danger-color': colors.red,
   'warning-color': colors.orange,
-  'text-color': colors['gray-8'],
-  'active-color': colors['gray-2'],
+  'text-color': colors.normal,
+  'active-color': colors.dark,
   'active-opacity': 0.7,
   'disabled-opacity': 0.5,
-  'background-color': colors['gray-1'],
+  'background-color': colors.light,
   'background-color-light': '#fafafa',
   'text-link-color': '#576b95',
 };
@@ -80,16 +64,6 @@ const font = {
   'line-height-lg': 22,
 };
 
-/**
- * Animation
- */
-export const animation = {
-  'animation-duration-base': '0.3s',
-  'animation-duration-fast': '0.2s',
-  'animation-timing-function-enter': 'ease-out',
-  'animation-timing-function-leave': 'ease-in',
-};
-
 export const border = {
   'border-color': colors['gray-3'],
   'border-width-base': 1,
@@ -106,6 +80,5 @@ export default {
   ...componentColors,
   ...padding,
   ...font,
-  ...animation,
   ...border,
 };
