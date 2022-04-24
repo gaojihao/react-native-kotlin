@@ -6,7 +6,6 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -43,7 +42,4 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
-  "jest": {
-    "preset": "react-native"
-  }
 }
