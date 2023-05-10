@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         SoLoader.init(this, false)
+        supportActionBar?.hide()
         reactRootView = ReactRootView(this)
         val packages: List<ReactPackage> = PackageList(application).packages
         reactInstanceManager = ReactInstanceManager.builder()
