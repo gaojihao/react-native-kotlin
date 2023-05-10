@@ -13,7 +13,7 @@ class CommonAPIModule(reactContext: ReactApplicationContext) : ReactContextBaseJ
      */
     @ReactMethod
     fun back(needRefresh: Boolean) {
-
+        currentActivity?.finish()
     }
 
     /**
