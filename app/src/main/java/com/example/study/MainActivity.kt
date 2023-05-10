@@ -3,6 +3,7 @@ package com.example.study
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
+import com.example.study.module.ReactNativePackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
         SoLoader.init(this, false)
         supportActionBar?.hide()
         reactRootView = ReactRootView(this)
-        val packages: List<ReactPackage> = PackageList(application).packages
+        val packages: List<ReactPackage> = PackageList(application).packages.apply {
+            add(ReactNativePackage())
+        }
         reactInstanceManager = ReactInstanceManager.builder()
             .setApplication(application)
             .setCurrentActivity(this)
@@ -30,6 +33,8 @@ class MainActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.RESUMED)
             .build()
+
+        reactInstanceManager.devSupportManager
         reactRootView?.startReactApplication(reactInstanceManager, "hybrid_earth", null)
         setContentView(reactRootView)
     }
@@ -51,6 +56,7 @@ class MainActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
 
     override fun onDestroy() {
         super.onDestroy()
+        supportActionBar?.show()
         reactInstanceManager.onHostDestroy(this)
         reactRootView.unmountReactApplication()
     }
