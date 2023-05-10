@@ -1,6 +1,20 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.facebook.react'
+}
+
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+react {
+    root = rootDir
+    reactNativeDir = file(rootDir.path+"/node_modules/react-native")
+    cliFile = file(rootDir.path+"/node_modules/react-native/cli.js")
 }
 
 android {
@@ -38,7 +52,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation "com.facebook.react:react-android"
+    implementation "com.facebook.react:hermes-android"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
